@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import TypeIt from "typeit-react";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+const TypeIt = dynamic(() => import("typeit-react"), { ssr: false });
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import webDevAnimation from "../web-dev-animation.json";
 
 export default function Hero() {
